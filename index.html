@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+
+    <script type="module" src="./src/scripts/index.js"></script>
+    <title>PetInfo</title>
+</head>
+<body>
+    <main class="container index">
+        <section class="index__section-petinfo">
+            <h1>PetInfo</h1>
+            <h2 class="index__title"><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h2>
+            <p>Todas as informações para melhorar a vida de seu pet em um só lugar.</p>
+            <div class="index__div-pets">
+                <div class="index__img-three-pets">
+                    <img src="./src/assets/index-pet1.png" alt="pet1">
+                    <img src="./src/assets/index-pet2.png" alt="pet2">
+                    <img src="./src/assets/index-pet3.png" alt="pet3">
+                </div>
+                <img src="./src/assets/index-pet4.png" alt="pet4">
+            </div>
+        </section>
+        <form class="index__section-login">
+            <h3>Login</h3>
+
+            <p>Email</p>
+            <input type="email" name="inputEmail" id="email">
+            <p class="index__email-error hidden">O email está incorreto</p>
+
+            <p>Senha</p>
+            <input type="password" name="inputPassword" id="password">
+            <p class="index__password-error hidden">A senha está incorreta</p>
+
+            <button type="button" class="index__button-acess">Acessar</button>
+
+            <div class="index__div-register">
+                <h4>Ainda não possui conta?</h4>
+                <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+                <button type="button" class="index__button-register">Cadastrar</button>
+            </div> 
+        </form>        
+    </main>
+</body>
+</html>

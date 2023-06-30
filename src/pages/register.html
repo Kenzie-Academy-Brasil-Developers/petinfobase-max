@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+
+    <script type="module" src="../scripts/register.js"></script>
+    <title>PetInfo</title>
+</head>
+<body>
+    <main class="container register__main">
+        <form class="register__section-login">
+            <div class="register__div-title">
+              <h2>Cadastro</h2>
+              <button type="button" class="register__button-back-login">Voltar para o login</button>
+            </div>
+            
+
+            <p>Email</p>
+            <input type="email" name="inputEmail" id="email">
+            <p class="register__email-error hidden">O email está incorreto</p>
+
+            <p>Senha</p>
+            <input type="password" name="inputPassword" id="password">
+            <p class="register__password-error hidden">A senha está incorreta</p>
+
+            <button type="button" class="register__button-acess">Acessar</button>
+
+            <div class="register__div-register">
+                <h3>Ainda não possui conta?</h3>
+                <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+                <button class="register__button-register">Cadastrar</button>
+            </div> 
+        </form> 
+        <section class="register__section-petinfo">
+            <h1>PetInfo</h1>
+            <p class="register__title"><span>Amor</span> e <span>carinho</span> por meio do conhecimento</p>
+            <p>Todas as informações para melhorar a vida de seu pet em um só lugar.</p>
+            <div class="register__div-pets">
+                <div class="register__img-three-pets">
+                    <img src="../assets/index-pet1.png" alt="pet1">
+                    <img src="../assets/index-pet2.png" alt="pet2">
+                    <img src="../assets/index-pet3.png" alt="pet3">
+                </div>
+                <img src="../assets/index-pet4.png" alt="pet4">
+            </div>
+        </section>
+               
+    </main>
+</body>
+</html>
