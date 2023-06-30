@@ -1,17 +1,36 @@
 button {
+  width: 100%;
+  font-size: var(--font-size-title-3);
   border: 0;
   border-radius: 0.3rem;
   padding: 0.6rem;
   cursor: pointer;
 }
 
-.redirect-edit__button {
+.index__button-acess, .register__button-acess{
+  background-color: var(--brand100);
+  color: var(--gray900);
+}
+
+.index__button-acess:hover, .register__button-acess:hover{
+  background-color: var(--brand200);
+}
+
+.register__button-back-reg{
+  width: 8.3125rem;
+  height: 1.8125rem;
+
+  font-size: var(--font-size-text);
+  font-weight: var(--weight-title);
+}
+
+.redirect-edit__button,.index__button-register, .register__button-back-reg, .register__button-register {
   border: 1px solid var(--gray600);
   background-color: var(--gray900);
   color: var(--gray100);
 }
 
-.redirect-edit__button:hover {
+.redirect-edit__button:hover, .index__button-register:hover, .register__button-back-reg:hover, .register__button-register:hover {
   background-color: var(--gray800);
 }
 

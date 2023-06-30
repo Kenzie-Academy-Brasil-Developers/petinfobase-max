@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/globalStyles.css">
     <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/inputs.css">
 
     <script type="module" src="./src/scripts/index.js"></script>
     <title>PetInfo</title>
 </head>
+
 <body>
-    <main class="container index">
+    <main class="container index__main">
         <section class="index__section-petinfo">
             <h1>PetInfo</h1>
             <h2 class="index__title"><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h2>
-            <p>Todas as informações para melhorar a vida de seu pet em um só lugar.</p>
+            <p>Todas as informações para melhorar a vida do seu pet em um só lugar.</p>
             <div class="index__div-pets">
                 <div class="index__img-three-pets">
                     <img src="./src/assets/index-pet1.png" alt="pet1">
                     <img src="./src/assets/index-pet2.png" alt="pet2">
                     <img src="./src/assets/index-pet3.png" alt="pet3">
                 </div>
-                <img src="./src/assets/index-pet4.png" alt="pet4">
+                <div class="index__img-one-pets">
+                    <img src="./src/assets/index-pet4.png" alt="pet4">
+                </div>
             </div>
         </section>
-        <form class="index__section-login">
+        <form class="index__form-login">
             <h3>Login</h3>
 
-            <p>Email</p>
-            <input type="email" name="inputEmail" id="email">
-            <p class="index__email-error hidden">O email está incorreto</p>
+            <div class="index__div-email">
+                <p class="input-type-text">Email</p>
+                <input type="email" name="inputEmail" id="email" placeholder="Digite seu email">
+                <p class="error__text hidden">O email está incorreto</p>
+            </div>
 
-            <p>Senha</p>
-            <input type="password" name="inputPassword" id="password">
-            <p class="index__password-error hidden">A senha está incorreta</p>
+            <div class="index__div-password">
+                <p class="input-type-text">Senha</p>
+                <input type="password" name="inputPassword" id="password" placeholder="Digite sua senha"">
+                <p class="error__text hidden">A senha está incorreta</p>
+            </div>
 
             <button type="button" class="index__button-acess">Acessar</button>
 
@@ -42,8 +55,9 @@
                 <h4>Ainda não possui conta?</h4>
                 <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
                 <button type="button" class="index__button-register">Cadastrar</button>
-            </div> 
-        </form>        
+            </div>
+        </form>
     </main>
 </body>
+
 </html>

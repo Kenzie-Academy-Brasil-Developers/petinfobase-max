@@ -1,10 +1,13 @@
 
 const controllerButtonBack = () => {
-    const buttonBack = document.querySelector('.register__button-back-login')
+    const buttonBack = document.querySelectorAll('.back__index-button')
 
-    buttonBack.addEventListener('click', () => {
-        location.replace('../../index.html')
-    })
+    buttonBack.forEach(element => {
+        element.addEventListener('click', () => {
+            location.replace('../../index.html')
+        })
+    });
+
 }
 
 controllerButtonBack() 

@@ -1,5 +1,5 @@
 :root {
-  --brand100: hsl(230, 57%, 50%);
+  --brand100: hsl(230, 57%, 50%,1);
   --brand200: hsl(230, 68%, 54%);
   --gray100: hsl(210, 11%, 15%);
   --gray200: hsl(210, 10%, 23%);
@@ -13,10 +13,21 @@
   --alert100: hsl(349, 57%, 50%);
   --alert200: hsl(349, 69%, 55%);
   --sucess100: hsl(162, 88%, 26%);
+
+  --radius: 2px;
+
+  --weight-title: 600;
+  --weight-title-2: 550;
+  --weight-text: 400;
+
+  --font-size-title: 25px;
+  --font-size-title-2: 17px;
+  --font-size-title-3: 13px;
+  --font-size-text: 12px;
 }
 
 body {
-  font-family: "Inter, sans-serif";
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -35,6 +46,20 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
+}
+
+.error__text{
+  font-size: var(--font-size-text);
+  font-weight: var(--weight-text);
+  margin-top: 4px;
+
+  color: var(--alert100);
+}
+
+.input-type-text{
+  margin-bottom: 15px;
+  font-size: var(--font-size-title-3);
+  font-weight: var(--weight-title-2);
 }
