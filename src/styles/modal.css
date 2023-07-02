@@ -1,0 +1,57 @@
+.modal__controller {
+    margin-top: 30px;
+}
+
+.modal__section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modal-top__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desc-user__container {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.modal__img-user-list {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    border: 1px solid var(--brand100);
+}
+
+.modal__name-user {
+    font-size: var(--font-size-title-2);
+    font-weight: var(--weight-normal);
+}
+
+.modal__date-publisher {
+    color: var(--gray400);
+}
+
+.desc-user__container span {
+    color: var(--gray600);
+}
+
+.modal-post__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-post__container h3 {
+    font-size: var(--font-size-title-1);
+}
+
+.modal-post__container p {
+    font-size: var(--font-size-title-3);
+}
