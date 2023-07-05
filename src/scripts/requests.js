@@ -35,8 +35,6 @@ export const loginRequest = async (loginBody) => {
             const inputEmail = document.getElementById('indexEmail')
             const emailMsgIncorrect = document.querySelector('.index-error__email')
 
-            console.log(inputEmail)
-
             toastOpen(err.message, 'Tente novamente', redToast, 'erro')
 
             inputEmail.classList.add('input__error-red')
@@ -45,6 +43,8 @@ export const loginRequest = async (loginBody) => {
         } else if (err.message === 'A senha está incorreta'){
             const inputPassword = document.getElementById('indexPassword')
             const passwordMsgIncorrect = document.querySelector('.index-password__email')
+
+            console.log(err.message)
 
             toastOpen(err.message, 'Tente novamente', redToast, 'erro')
 
