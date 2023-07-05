@@ -22,7 +22,7 @@
   --weight-text: 400;
 
   --font-size-title: 25px;
-  --font-size-title-1: 23px;
+  --font-size-title-1: 22px;
   --font-size-title-2: 17px;
   --font-size-title-3: 13px;
   --font-size-text: 12px;
@@ -41,7 +41,7 @@ dialog {
   border: 0;
   width: 48rem;
   max-height: 80vh;
-  border-radius: 1rem;
+  border-radius: 9px;
 }
 
 dialog::backdrop {

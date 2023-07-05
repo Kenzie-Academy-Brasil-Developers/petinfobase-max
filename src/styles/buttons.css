@@ -97,8 +97,3 @@ button {
 .dashboard__button-delete:hover, .modal-close__button:hover{
   background-color: var(--gray600);
 }
-
-.modal-close__button{
-    width: 34px;
-    color: var(--gray400);
-}

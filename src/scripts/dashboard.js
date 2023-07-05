@@ -1,14 +1,9 @@
-import { closeModal, closeModalOutlineClick } from "./modal.js"
+import { controlOpenModal} from './modal.js'
 
-const controlModal = () => {
-    const buttonModal = document.querySelector('.dashboard__button-acess-publication')
-    const modalController = document.querySelector('.modal__controller')
+controlOpenModal('dashboard__button-acess-publication')
 
-    buttonModal.addEventListener('click', () => {
-        modalController.showModal()
-        closeModalOutlineClick()
-        closeModal()
-    })
-}
+controlOpenModal('dashboard__button-edit')
 
-controlModal()
+controlOpenModal('dashboard__button-delete')
+
+controlOpenModal('dashboard__button-publication')

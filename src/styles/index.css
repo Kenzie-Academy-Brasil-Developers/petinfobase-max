@@ -7,16 +7,18 @@
     gap: 15px;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: var(--font-size-title);
     font-weight: var(--weight-title);
 }
 
 .index__section-petinfo {
-    width: 311px;;
+    width: 311px;
+    ;
     height: 400px;
     padding: 37px;
-    
+
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -47,7 +49,7 @@ h1, h2 {
     gap: 18px;
 }
 
-.index__form-login{
+.index__form-login {
     width: 260px;
     height: 418px;
 
@@ -66,13 +68,14 @@ h1, h2 {
     gap: 21px;
 }
 
-.index__div-email, .index__div-password{
+.index__div-email,
+.index__div-password {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.index__div-register{
+.index__div-register {
     font-size: var(--font-size-text);
     font-weight: var(--weight-title-2);
     text-align: center;
@@ -84,7 +87,7 @@ h1, h2 {
     gap: 15px;
 }
 
-.index__div-register p{
+.index__div-register p {
     font-weight: var(--weight-text);
     color: var(--gray300);
 }
