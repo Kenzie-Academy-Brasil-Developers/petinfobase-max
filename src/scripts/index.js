@@ -28,7 +28,7 @@ const handleLogin = () => {
         if (count !== 0) {
             count = 0
 
-            return toastOpen('Campo faltando', 'Por favor preencha todos os campos de login', 'var(--alert100)', 'erro')
+            return toastOpen('Campo faltando', 'Por favor preencha todos os campos de login', 'var(--alert100)', 'erroIndex')
         } else {
             loginRequest(loginBody)
         }
@@ -39,7 +39,7 @@ const verifyInputsIncorrect = () => {
     const inputEmail = document.getElementById('indexEmail')
     const emailMsgIncorrect = document.querySelector('.index-error__email')
     const inputPassword = document.getElementById('indexPassword')
-    const passwordMsgIncorrect = document.querySelector('.index-password__email')
+    const passwordMsgIncorrect = document.querySelector('.index-password__erro')
 
     inputEmail.addEventListener('input', () =>{
         inputEmail.classList.remove('input__error-red')
