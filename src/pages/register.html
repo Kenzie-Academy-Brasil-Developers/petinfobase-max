@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" href="../styles/register.css">
+
+    <script type="module" src="../scripts/register.js"></script>
+    <title>PetInfo</title>
+</head>
+
+<body>
+    <main class="container register__main">
+        <form class="register__form-reg">
+            <div class="register__div-title">
+                <h1>Cadastro</h1>
+                <button type="button" class="register__button-back-reg  back__index-button">Voltar para o login</button>
+            </div>
+
+            <div class="register__div-user">
+                <p class="input-type-text">Usuário</p>
+                <input type="text" name="username" id="registerUser" placeholder="Digite seu usuário aqui">
+                <p class="input__erro-red hidden">A senha está incorreta</p>
+            </div>
+
+            <div class="register__div-email">
+                <p class="input-type-text">Email</p>
+                <input type="email" name="email" id="registerEmail" placeholder="Digite seu email aqui">
+                <p class="input__erro-red hidden">O email está incorreto</p>
+            </div>
+
+            <div class="register__div-img">
+                <p class="input-type-text">Link da foto do perfil</p>
+                <input type="text" name="avatar" id="registerImg" placeholder="Insira o link aqui">
+                <p class="input__erro-red hidden">A senha está incorreta</p>
+            </div>
+
+            <div class="register__div-password">
+                <p class="input-type-text">Senha</p>
+                <input type="password" name="inputPassword" id="registerPassword" placeholder="Digite sua senha aqui">
+                <p class="register__password-error hidden">A senha está incorreta</p>
+            </div>
+
+            <button type="button" class="register__button-acess">Acessar</button>
+            <button type="button" class="register__button-register back__index-button">Voltar para o login</button>
+        </form>
+        <section class="register__section-petinfo">
+            <h2>PetInfo</h2>
+            <span>Ooooooba!</span>
+            <p>Todas as informações para melhorar a vida de seu pet em um só lugar.</p>
+            <div class="register__div-pets">
+                <img src="../assets/register-pet4.png" alt="pet4">
+                <div class="register__img-three-pets">
+                    <img src="../assets/register-pet1.png" alt="pet1">
+                    <img src="../assets/register-pet2.png" alt="pet2">
+                    <img src="../assets/register-pet3.png" alt="pet3">
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

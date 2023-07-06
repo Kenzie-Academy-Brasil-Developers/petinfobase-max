@@ -1,0 +1,93 @@
+.register__main {
+    min-width: 100dvw;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+h1 {
+    font-size: var(--font-size-title-2);
+    font-weight: var(--weight-title);
+}
+
+h2 {
+    font-size: var(--font-size-title);
+    font-weight: var(--weight-title);
+}
+
+span {
+    font-size: var(--font-size-title);
+    font-weight: var(--weight-title);
+    color: var(--brand100);
+}
+
+.register__section-petinfo {
+    width: 311px;
+    height: 400px;
+    padding: 37px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    gap: 20px;
+}
+
+.register__section-petinfo span {
+    color: var(--brand100);
+}
+
+.register__section-petinfo p {
+    color: var(--gray300);
+    font-size: var(--font-size-text);
+    font-weight: var(--weight-text);
+}
+
+.register__div-pets {
+    max-width: 297px;
+    max-height: 215px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+
+.register__img-three-pets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.register__form-reg {
+    width: 300px;
+    height: 510px;
+
+    border: 1px solid var(--gray600);
+    border-radius: var(--radius);
+
+    padding: 40px 20px 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+
+    gap: 15px;
+}
+
+.register__div-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register__div-email,
+.register__div-password,
+.register__div-img,
+.register__div-user {
+    width: 100%;
+    height: auto;
+}

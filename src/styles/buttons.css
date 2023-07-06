@@ -1,17 +1,50 @@
 button {
+  width: 100%;
+  height: 32px;
+  font-size: var(--font-size-title-3);
+  font-weight: var(--weight-normal);
   border: 0;
   border-radius: 0.3rem;
   padding: 0.6rem;
   cursor: pointer;
 }
 
-.redirect-edit__button {
+.index__button-acess,
+.register__button-acess,
+.dashboard__button-publication {
+  background-color: var(--brand100);
+  color: var(--gray900);
+}
+
+.index__button-acess:hover,
+.register__button-acess:hover,
+.dashboard__button-publication:hover {
+  background-color: var(--brand200);
+}
+
+.register__button-back-reg {
+  width: 8.3125rem;
+  height: 1.8125rem;
+
+  font-size: var(--font-size-text);
+  font-weight: var(--weight-title);
+}
+
+.redirect-edit__button,
+.index__button-register,
+.register__button-back-reg,
+.register__button-register,
+.dashboard__button-edit {
   border: 1px solid var(--gray600);
-  background-color: var(--gray900);
+  background-color: white;
   color: var(--gray100);
 }
 
-.redirect-edit__button:hover {
+.redirect-edit__button:hover,
+.index__button-register:hover,
+.register__button-back-reg:hover,
+.register__button-register:hover,
+.dashboard__button-edit:hover {
   background-color: var(--gray800);
 }
 
@@ -40,4 +73,27 @@ button {
 
 .alert__button:hover {
   background-color: var(--alert200);
+}
+
+.dashboard__button-acess-publication {
+  width: 114px;
+  height: 0;
+  background-color: transparent;
+
+  color: var(--brand100);
+  border: none;
+  padding: 0;
+}
+
+.dashboard__button-acess-publication:hover {
+  color: var(--brand200);
+  text-decoration: underline;
+}
+
+.dashboard__button-delet, .modal-close__button{
+  background-color: var(--gray700);
+}
+
+.dashboard__button-delete:hover, .modal-close__button:hover{
+  background-color: var(--gray600);
 }

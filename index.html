@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/toast.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/inputs.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    
+
+    <script type="module" src="./src/scripts/index.js"></script>
+    <title>PetInfo</title>
+</head>
+
+<body>
+    <main class="container index__main">
+        <section class="index__section-petinfo">
+            <h1>PetInfo</h1>
+            <h2 class="index__title"><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h2>
+            <p>Todas as informações para melhorar a vida do seu pet em um só lugar.</p>
+            <div class="index__div-pets">
+                <div class="index__img-three-pets">
+                    <img src="./src/assets/index-pet1.png" alt="pet1">
+                    <img src="./src/assets/index-pet2.png" alt="pet2">
+                    <img src="./src/assets/index-pet3.png" alt="pet3">
+                </div>
+                <div class="index__img-one-pets">
+                    <img src="./src/assets/index-pet4.png" alt="pet4">
+                </div>
+            </div>
+        </section>
+        <form class="index__form-login">
+            <h3>Login</h3>
+
+            <div class="index__div-email">
+                <p class="input-type-text">Email</p>
+                <input class="login__input" type="email" name="email" id="indexEmail" placeholder="Digite seu email">
+                <p class="error__text index-error__email hidden">O email está incorreto</p>
+            </div>
+
+            <div class="index__div-password">
+                <p class="input-type-text">Senha</p>
+                <input class="login__input" type="password" name="password" id="indexPassword" placeholder="Digite sua senha">
+                <p class="error__text index-password__email hidden">A senha está incorreta</p>
+            </div>
+
+            <button type="button" class="index__button-acess">Acessar</button>
+
+            <div class="index__div-register">
+                <h4>Ainda não possui conta?</h4>
+                <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+                <button type="button" class="index__button-register">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+    <section class="toast__container hidden-toast">
+        <figure class="toast__figure">
+            <img src="./src/assets/check-true.svg" alt="check" class="toast__image">
+            <figcaption class="toast__message">Login feito com sucesso!</figcaption>
+        </figure>
+        <p class="toast__text">Agora você pode acessar os conteúdos utilizando seu usuário e senha da página de login: <a href="./index.html">Acessar página</a></p>
+    </section>
+</body>
+
+</html>

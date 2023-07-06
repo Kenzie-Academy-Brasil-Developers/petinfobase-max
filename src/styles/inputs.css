@@ -1,0 +1,28 @@
+input{
+    width: 100%;
+    height: 35px;
+
+    font-size: var(--font-size-title-3);
+    font-weight: var(--weight-text);
+
+    text-indent: 5px;
+    text-align: start;
+
+    background-color: var(--gray800);
+
+    border: 1px solid var(--gray600);
+
+    border-radius: var(--radius);
+}
+
+input::placeholder{
+    color: var(--gray500);
+}
+
+input:hover{
+    border-color: var(--gray100);
+}
+
+.input__error-red{
+    border-color: var(--alert100);
+}
