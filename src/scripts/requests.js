@@ -35,9 +35,7 @@ export const loginRequest = async (loginBody) => {
             const inputEmail = document.getElementById('indexEmail')
             const emailMsgIncorrect = document.querySelector('.index-error__email')
 
-            console.log(inputEmail)
-
-            toastOpen(err.message, 'Tente novamente', redToast, 'erro')
+            toastOpen(err.message, 'Tente novamente', redToast, 'erroIndex')
 
             inputEmail.classList.add('input__error-red')
             emailMsgIncorrect.classList.remove('hidden')
@@ -46,12 +44,12 @@ export const loginRequest = async (loginBody) => {
             const inputPassword = document.getElementById('indexPassword')
             const passwordMsgIncorrect = document.querySelector('.index-password__email')
 
-            toastOpen(err.message, 'Tente novamente', redToast, 'erro')
+            toastOpen(err.message, 'Tente novamente', redToast, 'erroIndex')
 
             inputPassword.classList.add('input__error-red')
             passwordMsgIncorrect.classList.remove('hidden')
         } else {
-            toastOpen(err.message, 'Tente novamente mais tarde', redToast, 'erro')
+            toastOpen(err.message, 'Tente novamente mais tarde', redToast, 'erroIndex')
         }
     })
 
@@ -66,16 +64,26 @@ export const createUserRequest = async (newUserBody) => {
         },
         body: JSON.stringify(newUserBody) 
     })
-    .then((res) => {
+    .then(async (res) => {
+        const resJson = await res.json()
+
         if (res.ok){
-            localStorage.replace('../../index')
-        } else {
+            localStorage.setItem('@petinfo:user', JSON.stringify(resJson))
+
+            toastOpen('',  '', greenToast, 'register') 
+
+            setTimeout(() => {
+                location.replace('../../index.html')
+            }, 2000)
+
+        } else {  
             throw new Error(res.message)
         }
     })
     .catch(err =>{
-        
+        toastOpen('Erro no cadastro', 'Usuario ou email já cadastrado', redToast, 'erroCreate')       
     })
 
+    return createUser
 }
 
