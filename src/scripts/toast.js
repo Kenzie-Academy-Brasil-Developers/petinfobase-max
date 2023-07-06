@@ -4,21 +4,19 @@ export const toastOpen = (message, text, color, type) => {
     const body = document.querySelector('body')
     let messageItem = ''
     let textItem = ''
-
     
-    
-    if (type === 'erro') {
+    if (type === 'erroIndex' || type === 'erroCreate') {
         messageItem = message
         textItem = text
 
-        const henderToast = toastRender(messageItem, textItem, 'erro', color)
+        const henderToast = toastRender(messageItem, textItem, type, color)
         
         body.appendChild(henderToast)
     } else if (type === 'login') {
         messageItem =  'Login feito com sucesso!'
         textItem = 'Aguarde que você será redirecionado a pagina de dashboard'
 
-        const henderToast = toastRender(messageItem, textItem, '', color)
+        const henderToast = toastRender(messageItem, textItem, 'login', color)
         
         body.appendChild(henderToast)
     } else if (type === 'register') {

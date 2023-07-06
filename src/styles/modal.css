@@ -1,7 +1,8 @@
-/* ###  Modal Post  ### */
-.modal-post__controller {
-    margin-top: 30px;
+.modal-post__controller, .modal-delete__controller, .modal-create__controller, .modal-edit__controller {
+    margin-top: 20vh;
 }
+
+/* ###  Modal Post  ### */
 
 .modal-post__section {
     display: flex;
@@ -64,10 +65,6 @@
 
 
 /* ###  Modal Edit  ### */
-
-.modal-edit__controller {
-    margin-top: 30px;
-}
 
 .modal-edit__section {
     display: flex;
@@ -180,11 +177,7 @@
 
 /* ###  Modal Delete  ### */
 
-.modal-delete__controller{
-    margin-top: 30px;
-}
-
-.modal-delete__section{
+.modal-delete__section {
     display: flex;
     flex-direction: column;
 
@@ -208,7 +201,7 @@
     color: var(--gray400);
 }
 
-.modal-delete-itens__container{
+.modal-delete-itens__container {
     display: flex;
     flex-direction: column;
 
@@ -255,10 +248,6 @@
 }
 
 /* ###  Modal Create  ### */
-
-.modal-create__controller {
-    margin-top: 30px;
-}
 
 .modal-create__section {
     display: flex;
@@ -340,15 +329,6 @@
     border-radius: var(--radius);
 }
 
-
-
-
-
-
-
-
-
-
 .modal-create__buttons-div {
     display: flex;
     justify-content: end;
@@ -377,6 +357,3 @@
 .modal-create__button-publish:hover {
     background-color: var(--brand200);
 }
-
-
-

@@ -3,7 +3,7 @@ export const toastRender = (message, text, image, color) => {
     const toastFigure = document.createElement('figure')
     const toastImg = document.createElement('img')
     const toastMessage = document.createElement('figcaption')
-    const toastText = document.createElement('p') 
+    const toastText = document.createElement('div') 
 
     toastContainer.classList.add('toast__container')
     toastContainer.classList.add('hidden-toast')
@@ -12,15 +12,19 @@ export const toastRender = (message, text, image, color) => {
     toastMessage.classList.add('toast__message')
     toastText.classList.add('toast__text')
     
-    if (image === 'erro'){
+    if (image === 'erroIndex'){
         toastImg.src = './src/assets/error-icon.svg'
-    } else {
+    } else if(image === 'erroCreate' || image === 'erroDashboard'){
+        toastImg.src = '../assets/error-icon.svg'
+    } else if(image === 'login'){
         toastImg.src = './src/assets/check-true.svg'
+    } else {
+        toastImg.src = '../assets/check-true.svg'
     }
     
     toastMessage.style.color = color
     toastMessage.innerText = message
-    toastText.innerText = text
+    toastText.innerHTML = text
 
     toastContainer.append(toastFigure, toastText)
     toastFigure.append(toastImg, toastMessage)
