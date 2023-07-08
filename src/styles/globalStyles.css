@@ -1,5 +1,5 @@
 :root {
-  --brand100: hsl(230, 57%, 50%,1);
+  --brand100: hsl(230, 57%, 50%, 1);
   --brand200: hsl(230, 68%, 54%);
   --gray100: hsl(210, 11%, 15%);
   --gray200: hsl(210, 10%, 23%);
@@ -10,38 +10,42 @@
   --gray700: hsl(210, 17%, 95%);
   --gray800: hsl(210, 17%, 98%);
   --gray900: hsl(200, 100%, 99%);
+  --gray1000: hsl(210, 100%, 100%);
   --alert100: hsl(349, 57%, 50%);
   --alert200: hsl(349, 69%, 55%);
   --sucess100: hsl(162, 88%, 26%);
 
-  --radius: 2px;
+  --radius: 0.125rem;
 
   --weight-title: 600;
   --weight-title-2: 550;
   --weight-normal: 500;
   --weight-text: 400;
 
-  --font-size-title: 25px;
-  --font-size-title-1: 22px;
-  --font-size-title-2: 17px;
-  --font-size-title-3: 13px;
-  --font-size-text: 12px;
+  --font-size-title: 1.5625rem;
+  --font-size-title-1: 1.375rem;
+  --font-size-title-2: 1.0625rem;
+  --font-size-title-3: 0.8125rem;
+  --font-size-text: 0.75rem;
 }
 
 body {
   font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
 
 .container {
   max-width: 50rem;
   margin: 0 auto;
+  position: relative;
 }
 
 dialog {
+  z-index: 1 !important;
   border: 0;
-  width: 832px ;
+  width: 832px;
   max-height: 80vh;
-  border-radius: 9px;
+  border-radius: 0.5625rem;
 }
 
 dialog::backdrop {
@@ -52,16 +56,16 @@ dialog::backdrop {
   visibility: hidden;
 }
 
-.error__text{
+.error__text {
   font-size: var(--font-size-text);
   font-weight: var(--weight-text);
-  margin-top: 4px;
+  margin-top: 0.25rem;
 
   color: var(--alert100);
 }
 
-.input-type-text{
-  margin-bottom: 15px;
+.input-type-text {
+  margin-bottom: 0.9375rem;
   font-size: var(--font-size-title-3);
   font-weight: var(--weight-title-2);
 }

@@ -77,13 +77,142 @@ export const createUserRequest = async (newUserBody) => {
             }, 2000)
 
         } else {  
-            throw new Error(res.message)
+            throw new Error(resJson.message)
         }
     })
-    .catch(err =>{
-        toastOpen('Erro no cadastro', 'Usuario ou email já cadastrado', redToast, 'erroCreate')       
-    })
+    .catch(err => toastOpen('Erro no cadastro', err.message, redToast, 'erroDashboard'))
 
     return createUser
+}
+
+export const getUserProfile = async () => {
+    const token = localStorage.getItem('@petinfo:token')
+    const getUser = await fetch(`${baseUrl}/users/profile`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+    .then(res => {
+        if (res.ok) {
+            return res.json()
+        } else {
+            throw new Error('Problemas no servidor, tente novamente mais tarde')
+        }
+    })
+    .catch(err => toastOpen('Erro no servidor', err, redToast, 'erroDashboard')
+    )
+
+    return getUser
+}
+
+export const createPost = async (postBody) => {
+    const token = localStorage.getItem('@petinfo:token')
+    const newPost = await fetch(`${baseUrl}/posts/create`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(postBody)
+    })
+    .then(async (res) => {
+        const resJson = await res.json()
+
+        if (res.ok){
+            toastOpen('Post criado com sucesso!', 'O post foi criado e está disponível para visualização no seu feed', greenToast, '')
+
+            return resJson            
+        } else {
+            throw new Error(resJson.message)
+        }
+    })
+    .catch(err => {
+        const errorText = document.querySelector('.modal__show-erro-create')
+        errorText.classList.remove('hidden')
+        errorText.innerText = err.message
+        console.log(errorText)
+    })
+
+    return newPost
+}
+
+export const getPosts = async () => {
+    const token = localStorage.getItem('@petinfo:token')
+    const allPosts = fetch(`${baseUrl}/posts`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+    .then (res =>{
+        if (res.ok){
+            return res.json()
+        } else {
+            throw new Error('Problemas no servidor, tente novamente mais tarde')
+        }
+    })
+    .catch (err => toastOpen('Erro no servidor', err, redToast, 'erroDashboard'))
+
+    return allPosts
+}
+
+export const updatePostById = async (postId, requestBody) => {
+    const token = localStorage.getItem('@petinfo:token')
+   
+    const post = await fetch(`${baseUrl}/posts/${postId}`, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    })
+    .then(async (res) => {
+      const resJson = await res.json()
+  
+      if(res.ok) {
+        toastOpen('Post editado com sucesso!', 'O post foi editado e está disponível para visualização no seu feed', greenToast, '')
+  
+        return resJson
+      } else {
+        throw new Error(resJson.message)
+      }
+    })
+    .catch(err => {
+        const errorText = document.querySelector('.modal__show-erro-edit')
+        errorText.classList.remove('hidden')
+        errorText.innerText = err.message
+    })
+  
+    return post
+}
+
+export const deletePostById = async (postId) => {
+    const token = localStorage.getItem('@petinfo:token')
+    const post = await fetch(`${baseUrl}/posts/${postId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    .then(async (res) => {
+      const resJson = await res.json()
+  
+      if(res.ok) {
+        toastOpen('', '' , greenToast, 'delete')
+  
+        return resJson
+      } else {
+        throw new Error(resJson.message)
+      }
+    })
+    .catch(err => {
+        const errorText = document.querySelector('.modal__show-erro-delete')
+        errorText.classList.remove('hidden')
+        errorText.innerText = err.message
+    })
+  
+    return post
 }
 

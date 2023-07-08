@@ -50,8 +50,9 @@
     gap: 20px;
 }
 
-.modal-post__container h3 {
+.modal-post__container h2 {
     font-size: var(--font-size-title-1);
+    font-weight: var(--weight-title);
 }
 
 .modal-post__container p {
@@ -148,7 +149,22 @@
 
 .modal-edit__buttons-div {
     display: flex;
-    justify-content: end;
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.modal__show-erro-edit{
+    color: var(--alert100);
+
+    display: flex;
+    align-items: center;
+}
+
+.modal-edit__buttons-div div {
+    display: flex;
+    align-items: center;
 
     gap: 15px;
 }
@@ -220,7 +236,21 @@
 
 .modal-delete__buttons-div {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.modal__show-erro-delete{
+    color: var(--alert100);
+
+    display: flex;
+    align-items: center;
+}
+
+.modal-delete__buttons-div div{
+    display: flex;
+    align-items: center;
 
     gap: 15px;
 }
@@ -331,7 +361,21 @@
 
 .modal-create__buttons-div {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.modal__show-erro-create{
+    color: var(--alert100);
+
+    display: flex;
+    align-items: center;
+}
+
+.modal-create__buttons-div div {
+    display: flex;
+    align-items: center;
 
     gap: 15px;
 }
@@ -357,3 +401,4 @@
 .modal-create__button-publish:hover {
     background-color: var(--brand200);
 }
+
