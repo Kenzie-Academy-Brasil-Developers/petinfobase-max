@@ -1,7 +1,3 @@
-body {
-    overflow: hidden;
-}
-
 .toast__container{
     width: 300px;
     min-height: 70px;
@@ -21,6 +17,8 @@ body {
     justify-content: space-between;
 
     animation: fade-in 1.1s linear;
+
+    z-index: 9999 !important;
 }
 
 .toast__figure {
