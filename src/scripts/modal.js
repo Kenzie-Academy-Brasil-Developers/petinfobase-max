@@ -10,7 +10,7 @@ export const openModalCreatePost = () => {
 }
 
 export const closeModal = (typeModal) => {
-    const errorText = document.querySelector('.modal__erro-text-all')
+    
 
     if (typeModal === 'openPostButton') {
         const modalPostController = document.querySelector('.modal-post__controller')
@@ -31,6 +31,8 @@ export const closeModal = (typeModal) => {
         const buttonEditX = document.querySelector('.modal-edit-close__button')
         const buttonCancel = document.querySelector('.modal-edit__button-cancel')
         const body = document.querySelector('body')
+        const errorText = document.querySelector('.modal__show-erro-edit')
+
         const closeButton = () => {
             modalEditController.close()
             errorText.classList.add('hidden')
@@ -51,6 +53,7 @@ export const closeModal = (typeModal) => {
         const buttonCancel = document.querySelector('.modal-delete__button-cancel')
         const modalDeleteController = document.querySelector('.modal-delete__controller')
         const body = document.querySelector('body')
+        const errorText = document.querySelector('.modal__show-erro-delete')
         const closeButton = () => {
             modalDeleteController.close()
             errorText.classList.add('hidden')
@@ -71,6 +74,7 @@ export const closeModal = (typeModal) => {
         const buttonCancel = document.querySelector('.modal-create__button-cancel')
         const modalCreateController = document.querySelector('.modal-create__controller')
         const body = document.querySelector('body')
+        const errorText = document.querySelector('.modal__show-erro-create')
         const limpaInputs = () => {
             const inputsCreate = document.querySelectorAll('.create__post')
             inputsCreate.forEach(input => {
