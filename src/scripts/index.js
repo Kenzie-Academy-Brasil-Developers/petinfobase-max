@@ -1,5 +1,3 @@
-/* Desenvolva seu código aqui */
-
 import { loginRequest } from "./requests.js"
 import { toastOpen } from "./toast.js"
 
@@ -53,6 +51,7 @@ const verifyInputsIncorrect = () => {
 }
 
 verifyInputsIncorrect()
-controllerButtonRegister()
 handleLogin()
+controllerButtonRegister()
+
 
