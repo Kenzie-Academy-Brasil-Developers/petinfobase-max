@@ -30,6 +30,8 @@ export const loginRequest = async (loginBody) => {
         }
     })
     .catch(err =>{
+        const spinner = document.querySelector('.spinner')
+        spinner.classList.add('hidden')
 
         if (err.message === 'O email está incorreto'){
             const inputEmail = document.getElementById('indexEmail')

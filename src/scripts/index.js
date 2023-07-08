@@ -3,6 +3,9 @@ import { toastOpen } from "./toast.js"
 
 const controllerButtonRegister = () => {
     const buttonRegister = document.querySelector('.index__button-register')
+    const spinner = document.querySelector('.spinner')
+
+    spinner.classList.add('hidden')
 
     buttonRegister.addEventListener('click', () => {
         location.replace('./src/pages/register.html')
@@ -12,10 +15,11 @@ const controllerButtonRegister = () => {
 const handleLogin = () => {
     const inputs = document.querySelectorAll('.login__input')
     const button = document.querySelector('.index__button-acess')
+    const spinner = document.querySelector('.spinner')
     let loginBody = {}
     let count = 0
 
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
         inputs.forEach(input => {
             if (input.value.trim() === '') {
                 count++
@@ -28,7 +32,9 @@ const handleLogin = () => {
 
             return toastOpen('Campo faltando', 'Por favor preencha todos os campos de login', 'var(--alert100)', 'erroIndex')
         } else {
-            loginRequest(loginBody)
+            spinner.classList.remove('hidden')
+            console.log(spinner)
+            await loginRequest(loginBody)
         }
     })
 }
