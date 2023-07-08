@@ -46,7 +46,13 @@ const createCard = (bodyPost) => {
     postLine.innerText = '|'
     postDate.innerText = formatDate(createdAt)
     postTitle.innerText = title
-    postText.innerText = content
+
+    if (content.length >= 145){
+        postText.innerText = `${content.substring(0, 145)}...`
+    } else {
+        postText.innerText = content
+    }
+    
 
     postButtonAcess.innerText = 'Acessar publicação'
     postButtonAcess.dataset.postId = id

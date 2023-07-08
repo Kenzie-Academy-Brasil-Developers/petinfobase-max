@@ -220,18 +220,10 @@
 }
 
 .resume-description {
+    max-height: 57.6px;
+
     font-size: var(--font-size-title-2);
-    color: var(--gray300);
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Define o número máximo de linhas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 3.6rem;
-    /* Altura máxima (30px * 2 linhas) */
-
+    color: var(--gray300);  
 }
 
 @keyframes apareceDeCima {
